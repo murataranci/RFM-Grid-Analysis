@@ -6,7 +6,7 @@ RFM (Recency, Frequency, Monetary) segmentasyonu kullanarak müşteri verilerini
 
 ## 🚀 Canlı Demo
 
-**[🔗 Live Demo'yu Görüntüle](https://rfm-grid-analysis.vercel.app)**
+**[🔗 Live Demo'yu Görüntüle](https://rfm-grid-analysis.vercel.app/)**
 
 > Projeyi canlı olarak görmek için yukarıdaki linke tıklayın!
 
