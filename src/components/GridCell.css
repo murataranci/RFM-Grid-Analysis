@@ -1,0 +1,240 @@
+.grid-cell {
+  flex: 1;
+  min-height: 80px;
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  touch-action: manipulation;
+}
+
+.grid-cell.has-items {
+  background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%);
+  border-color: #E53E3E;
+  cursor: pointer;
+}
+
+.grid-cell.has-items:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255,107,107,0.5);
+}
+
+.grid-cell.expanded {
+  min-height: 200px;
+  z-index: 10;
+}
+
+.cell-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cell-count {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.grid-cell:not(.has-items) .cell-count {
+  color: #cbd5e0;
+}
+
+.cell-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.select-all-btn,
+.deselect-all-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.select-all-btn {
+  color: #48bb78;
+}
+
+.deselect-all-btn {
+  color: #f56565;
+}
+
+.select-all-btn:hover,
+.deselect-all-btn:hover {
+  transform: scale(1.1);
+  background: white;
+}
+
+.cell-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  flex: 1;
+  max-height: 300px;
+}
+
+.cell-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cell-items::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.cell-items::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.cell-items::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cell-item {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cell-item:hover {
+  background: white;
+  transform: translateX(4px);
+}
+
+.cell-item.selected {
+  background: #c6f6d5;
+  border-color: #48bb78;
+}
+
+.item-id {
+  font-weight: bold;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.item-details {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.item-details small {
+  color: #718096;
+}
+
+@media (max-width: 1024px) {
+  .grid-cell {
+    min-height: 70px;
+  }
+  
+  .cell-count {
+    font-size: 1.1rem;
+  }
+  
+  .cell-items {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cell {
+    min-height: 60px;
+    padding: 0.4rem;
+  }
+  
+  .grid-cell.expanded {
+    min-height: 180px;
+  }
+  
+  .cell-count {
+    font-size: 1rem;
+  }
+  
+  .select-all-btn,
+  .deselect-all-btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.85rem;
+  }
+  
+  .cell-items {
+    gap: 0.4rem;
+    max-height: 200px;
+  }
+  
+  .cell-item {
+    padding: 0.4rem;
+  }
+  
+  .item-id {
+    font-size: 0.9rem;
+  }
+  
+  .item-details {
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-cell {
+    min-height: 50px;
+    padding: 0.3rem;
+  }
+  
+  .grid-cell.expanded {
+    min-height: 160px;
+  }
+  
+  .cell-count {
+    font-size: 0.9rem;
+  }
+  
+  .select-all-btn,
+  .deselect-all-btn {
+    padding: 0.15rem 0.35rem;
+    font-size: 0.8rem;
+  }
+  
+  .cell-items {
+    gap: 0.3rem;
+    max-height: 150px;
+  }
+  
+  .cell-item {
+    padding: 0.35rem;
+  }
+  
+  .item-id {
+    font-size: 0.85rem;
+  }
+  
+  .item-details {
+    gap: 0.4rem;
+    font-size: 0.65rem;
+  }
+  
+  .item-details small {
+    white-space: nowrap;
+  }
+}
+

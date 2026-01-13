@@ -1,0 +1,165 @@
+.filters-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filters-header h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+}
+
+.reset-btn {
+  background: #edf2f7;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4a5568;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.reset-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.filter-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.filter-icon {
+  font-size: 1.2rem;
+}
+
+.filter-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-inputs input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.filter-inputs input:focus {
+  outline: none;
+  border-color: #FF6B6B;
+  box-shadow: 0 0 0 3px rgba(255,107,107,0.15);
+}
+
+.filter-separator {
+  color: #cbd5e0;
+  font-weight: bold;
+}
+
+.filter-info {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    padding: 1.25rem;
+  }
+  
+  .filters-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .reset-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .filter-groups {
+    gap: 1.25rem;
+  }
+  
+  .filter-label {
+    font-size: 0.95rem;
+  }
+  
+  .filter-icon {
+    font-size: 1.1rem;
+  }
+  
+  .filter-inputs input {
+    padding: 0.45rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-container {
+    padding: 1rem;
+  }
+  
+  .filters-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .filters-header h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .reset-btn {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  
+  .filter-groups {
+    gap: 1rem;
+  }
+  
+  .filter-label {
+    font-size: 0.9rem;
+  }
+  
+  .filter-inputs input {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .filter-info {
+    font-size: 0.7rem;
+  }
+}
+
