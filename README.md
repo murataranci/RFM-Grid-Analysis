@@ -4,6 +4,12 @@ RFM (Recency, Frequency, Monetary) segmentasyonu kullanarak müşteri verilerini
 
 ![RFM Grid Analysis](https://img.shields.io/badge/React-18.2.0-blue) ![Vite](https://img.shields.io/badge/Vite-5.0-purple)
 
+## 🚀 Canlı Demo
+
+**[🔗 Live Demo'yu Görüntüle](https://rfm-grid-analysis.vercel.app)**
+
+> Projeyi canlı olarak görmek için yukarıdaki linke tıklayın!
+
 ## 🎯 Genel Bakış
 
 Bu uygulama RFM verilerini görselleştirmek ve analiz etmek için sezgisel bir arayüz sunar:
